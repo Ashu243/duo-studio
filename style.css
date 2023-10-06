@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Comfortaa:wght@500;600&family=Maven+Pro:wght@700&family=Montserrat:wght@600&display=swap');
+/* 
+font-family: 'Caprasimo', cursive;
+font-family: 'Comfortaa', cursive;
+font-family: 'Maven Pro', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+@font-face {
+    font-family: font1;
+    src: url(ppmori.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    /* Add this line to hide horizontal scrollbars */
+}
+
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #EDBFFF;
+    z-index: 8;
+    transition: background-image ease 0.5s;
+    background-position: center;
+    background-size:cover ;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.main {
+    background-color: #0f0D0D;
+    cursor: none;
+}
+
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#nav {
+    height: 56px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+#nav img {
+    height: 25px;
+}
+
+#nav2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+#nav2 h4{
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all ease 1s;
+}
+
+#nav2 h4:nth-child(1){
+    color: rgb(210, 201, 201);
+    font-size: 15px;
+
+}
+#nav3 .circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 54px;
+}
+
+
+
+.page1 h1{
+    font-size: 8vw;
+    font-weight: 400;
+    font-family: font1;
+    margin-top: 7vw;
+    margin-left: 6.2vw;
+}
+.page1 h2{
+    font-size: 8vw;
+    font-weight: 400;
+    font-family: font1;
+    margin-left: 24vw;
+}
+.page1 video{
+    /* height: 60%; */
+    position: relative;
+    left: 50%;
+    width: 60%;
+    margin-top: 4vw;
+    transform: translate(-50%,0);
+}
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    /* padding: 100px 5vw; */
+    /* border-bottom: 2px solid #908b8b; */
+    position: relative;
+    z-index: 9;
+}
+
+.page2 h1{
+    font-size:7vw;
+    font-weight: 500;
+    color: #111;
+    font-family: font1;
+    padding-top: 5vw;
+    padding-left: 5vw;
+
+
+}
+
+.page2 .container{
+    height: 60vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: font1;
+    gap: 300px;
+
+    /* padding: 0 5vw; */
+}
+.page2-left{
+    /* background-color: blue; */
+    width: 40%;
+    padding: 0 5vw;
+    margin-left: -2vw;
+
+}
+.page2-right{
+    /* background-color: blue; */
+    width: 27%;
+    padding: 0 -5vw;
+
+}
+.page2-left h2{
+    font-size: 4vw;
+    font-weight: 300;
+    color: #111;
+    line-height: 4vw;
+}
+.page2-right p{
+    font-size: 24px;
+    color: #111;
+    font-family: font1;
+}
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    /* padding-top: 100px; */
+    position: relative;
+    z-index: 9;
+    /* margin-bottom: 100px; */
+}
+
+.page3 h1{
+    font-size: 6.8vw;
+    font-weight: 300;
+    color: #111;
+    font-family: font1;
+    margin-left: 100px;
+}
+.page3-part1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+}
+.page3-part1 img{
+    height: 400px;
+    margin-top: 160px;
+}
+.page3-part1 video{
+    height: 400px;
+    margin-top: 40px;
+}
+
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 9;
+    position: relative;
+    /* padding: 170px 100px; */
+    margin-top: 200px;
+}
+.elem{
+    /* background-color: salmon; */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.elem img{
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    height: 400px;
+    width: 500px;
+    transform: translateY(10%) rotate(2deg);
+}
+.elem img:nth-child(1){
+    left: 2%;
+}
+.elem img:nth-child(3){
+    right: 5%;
+}
+.text-div{
+    height: 16vh;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+}
+.elem h1{
+    font-size: 7.5vw;
+    font-weight: 600;
+    font-family: font1;
+    transition: all ease-out 0.5s;
+}
+
+.elem:hover h1{
+    transform: translateY(-100%);
+    color: #EDBFFF;
+    font-family: font1;
+}
+.elem:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+
+}
+
+.page5{
+    margin-top: 200px;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+.padiv{
+    width: 80%;
+}
+.page5 h2{
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+.box{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 20px;
+    border-top: 2px solid #dadada;
+}
+
+.box:nth-last-child(1){
+    border-bottom: 2px solid #dadada;
+
+}
+.footer{
+    min-height: 50vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+}
+
+
+
+/* Default styles for all screen sizes */
+/* ... Your existing CSS code ... */
+
+/* Media Query for Medium Screens */
+@media screen and (max-width: 768px) {
+    .page1 h1 {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+    
+    .page1 h2 {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+    
+    .page1 video {
+        width: 80%; /* Adjust video width for smaller screens */
+    }
+
+    .page2 h1 {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+    }
+    
+    /* Add more responsive styles as needed for medium screens */
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 576px) {
+    .page1 h1 {
+        font-size: 4.5vw; /* Adjust font size for smaller screens */
+    }
+    
+    .page1 h2 {
+        font-size: 4.5vw; /* Adjust font size for smaller screens */
+    }
+    
+    .page1 video {
+        width: 90%; /* Adjust video width for smaller screens */
+    }
+
+    .page2 h1 {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+    
+    /* Add more responsive styles as needed for small screens */
+}
+
+/* Media Query for Extra Small Screens */
+@media screen and (max-width: 480px) {
+    .page1 h1 {
+        font-size: 4vw; /* Adjust font size for extra small screens */
+    }
+    
+    .page1 h2 {
+        font-size: 4vw; /* Adjust font size for extra small screens */
+    }
+    
+    .page1 video {
+        width: 95%; /* Adjust video width for extra small screens */
+    }
+
+    .page2 h1 {
+        font-size: 3.5vw; /* Adjust font size for extra small screens */
+    }
+    
+    /* Add more responsive styles as needed for extra small screens */
+}
